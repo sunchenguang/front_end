@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+#header{
+	width:100%;
+	height:80px;
+	border:1px solid #aaaaaa;
+	margin:10px auto;
+	background:#3b5998;
+}
+#logo{
+	float:left;
+	margin:0 0 0 220px;
+	color:#fff;
+	font-size:3em;
+	font-weight:700;
+	line-height:80px;
+}
+#skin{
+	float:right;
+	margin:15px;
+	padding:4px;
+	width:120px;
+	list-style:none;
+	border:1px solid #cccccc;
+	background:#fff;
+	
+	
+	
+}
+
+#skin li{
+	float:left;
+	margin-right:4px;
+	
+	width:15px;
+	height:15px;
+	text-indent:-9999px;
+	overflow:hidden;
+	display:block;
+	cursor:pointer;
+	
+	
+	
+}
+
+#skin_0{ background:url(../img/theme.png) -30px -41px; margin-left:5px;}
+#skin_1{ background:url(../img/theme.png) -82px -41px; }
+#skin_2{ background:url(../img/theme.png) -134px -41px;}
+#skin_3{ background:url(../img/theme.png) -191px -41px;}
+#skin_4{ background:url(../img/theme.png) -254px -41px;}
+#skin_5{ background:url(../img/theme.png) -321px -41px;}
+
+#skin_0.selected{ background-position:-30px -94px;}
+#skin_1.selected{ background-position:-83px -94px;}
+#skin_2.selected{ background-position:-134px -94px;}
+#skin_3.selected{ background-position:-191px -94px;}
+#skin_4.selected{ background-position:-254px -94px;}
+#skin_5.selected{ background-position:-321px -94px;}
+
+
+
+
+
+
