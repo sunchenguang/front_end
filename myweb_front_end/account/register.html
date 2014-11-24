@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>注册-LOL</title>
+
+<meta name="keywords" content="喜欢LOL的童鞋可以进来看看">
+<meta name="description" content="发布一些LOL的文章和图片">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="author" content="LOL">
+<link href="../css/bootstrap1.css" rel="stylesheet">
+<link href="../css/custom_register.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+<script src="../js/reg_validate.js"></script>
+
+</head>
+
+<body style="background-image:url(../img/cat.jpg)" onLoad="i=0">
+  <div class="whitebox">
+    <div class="daohang">
+      <ul class="breadcrumb">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.php">首页</a>&nbsp;&nbsp;<span class="divider">></span></li>
+       <li class="active">&nbsp;&nbsp;注册</li>
+      </ul>
+    </div>
+  
+  <form id="reg-form" name="form1" method="post" action="../phpfile/register-1.php" onsubmit="return FrontPage_Form1_Validator(this)">
+    <div class="regbox">
+      <span class="h3">注册</span>
+      
+      <span class="space">已有帐号？ <a href="login.html"  class="text-warning" title="立即登录悦旅行">立即登录»</a></span><br>
+      
+      <p><input id="name" name="name"  type="text" placeholder="昵称" class="textbox" 
+          onFocus="show_name_tip();" onBlur="hide_name_tip();nameValidate()">
+          <span id="name-empty" class="text-empty" style="display:none">昵称不能为空</span></p>
+      <span id="name-tip" class="text-muted" style="display:none">数字、字母、中文 2-30个字符</span>
+      
+      
+      <p><input id="mail" name="mail" type="email" placeholder="邮箱"  class="textbox" 
+      onFocus="show_mail_tip();" onBlur="hide_mail_tip();mailValidate()"><span id="mail-empty" class="text-empty" style="display:none">邮箱不能为空</span></p>
+      <span id="mail-tip" class="text-muted" style="display:none">用来登录撸友之家，接收到激活邮件才能使用更多功能</span>
+      
+      
+      
+      <p><input id="passwd" name="passwd" type="password" placeholder="密码" class="textbox"
+       onFocus="show_passwd_tip();" onBlur="hide_passwd_tip();passwdValidate()"> <span id="passwd-empty" class="text-empty" style="display:none">密码不能为空</span></p>
+      <span id="passwd-tip" class="text-muted" style="display:none">至少包含字母和数字，最短8个字符，区分大小写</span>
+     
+      
+      
+      <p><input name="unum" type="text" id="unum" size="10" placeholder="验证码" class="textbox" />
+        <img src="../phpfile/function.php?id=-1" title="单击刷新" style="cursor:pointer"
+             onclick=eval('this.src="../phpfile/function.php?id='+i+++'"') alt="验证码图片" /></p><br />
+             
+      <button type="submit" id="submit" class="btn btn-primary btn_register btn-lg">注册</button>
+      
+      
+      
+     </div>
+     </form>
+       <div class="quick_login">
+         <p class="text-muted">使用合作账号快速登录</p>
+           <a id="sina-login" href="javascript:;"><img src="../img/weibo.jpg">  新浪微博</a>&nbsp;&nbsp;&nbsp;&nbsp;
+           <a id="qq-login" href="javascript:;"><img src="../img/qq.jpg">  QQ</a>
+       </div>
+     
+     
+     
+     
+     
+    </div>
+  
+  
+  
+  
+  </div>
+  
+ 
+
+
+
+
+
+
+
+
+</body>
+</html>

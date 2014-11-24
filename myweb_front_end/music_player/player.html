@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Html5 MusicPlayer</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/player.js?v=1.3"></script>
+	<script>
+	$(function(){
+		init();
+		initPlayer();
+	});
+	</script>
+</head>
+<body >
+<div id="explain" class="banner">
+	welcome！
+</div>
+<!--播放器-->
+<div id="player" class="player">
+	<div id="pbg" class="pbg"></div>
+	<div id="bg" class="bg"></div>
+	<!--面板-->
+	<div id="panel" class="panel">
+		<!--top-->
+		<div id="pname" class="pname">
+			<div id="mname" class="mname" title="歌曲滚动信息">
+				<marquee  behavior="scroll" direction="up" width="200" height="16" 
+				loop="-1" scrollamount="1" scrolldelay="100"  onMouseOver="this.stop()" onMouseOut="this.start()">
+				<p>Name：L-Player</p>
+				<p>版本：v1.0</p>
+				<p>作者：scg</p>
+				</marquee>
+			</div>
+			<div id="playername" class="playername" title="L-player">L-player</div>
+		</div>
+		<!--midd-->
+		<div id="minfo" class="minfo" title="歌曲信息">
+			<div id="m_info" class="m_info">
+				<div id="m_img" class="m_img" title="专辑封面">
+					<div id="imgcover" class="imgcover"></div>
+				</div>
+				<div id="m_name" class="m_name"><span class="info_m" style="text-align:right;">歌曲:</span><span class="musicname">--</span></div>
+			</div>
+			<!--歌词-->
+			<div id="m_lrc" class="m_lrc">
+				<div id="lrc" class="lrc">
+				<div id="lrcshow" class="lrcshow">
+					<ul id="lrc_content" style="margin-top:0;">
+					</ul>
+					</div>
+				</div>
+				<div id="m_id3" class="m_id3" title="歌曲ID3信息">
+						<div id="m_singer" class="m_singer"><span class="info_m">歌手:</span><span class="singer"> --</span></div>
+						<div id="m_album" class="m_album"><span class="info_m">专辑:</span><span class="album">--</span></div>
+				</div>
+			</div>
+		</div>
+		<!--bottom-->
+		<div id="mctrl" class="mctrl" title="控制区">
+			<!---------播放模式选择区--------->
+			<div id="modearea" class="modearea">
+				<div class="seqtype" title="顺序播放" ></div>
+				<div class="looptype"title="列表循环"></div>
+				<div class="single" title="单曲循环"></div>
+				<div class="randtype" title="随机播放"></div>
+			</div>	
+			<!---------播放模式选择区--------->
+			<div id="pg_bar" class="pg_bar">
+				<div id="temp" class="temp"></div>
+				<div id="pg_bar_bg" class="pg_bar_bg">
+					<!---------当前进度-------->
+					<div id="curr_bar" class="curr_bar"></div>
+				</div>
+				<span id="rest_time" class="rest_time">0:00</span>
+			</div>
+			<div id="playtype" class="playtype" title="功能区">
+				<div class="type" id="showlist" title="关闭播放列表"><div class="showbtn"></div></div>
+				<div class="type" id="lrcswitch" title="开启中">lrc</div>
+				<div class="type" id="stylechange" title="风格切换" name="music">Style</div>
+				<div class="type" id="playmode" title="播放模式"><div class="modebtn" id="looptype"></div></div>
+			</div>
+			<div id="ctrlbutton" class="ctrlbutton" title="控制区">
+				<div id="beforesong" class="beforesong" title="上一曲"><div class="prebutton"></div></div>
+				<div id="play" class="play" title="播放"><div class="playbutton" id="playbutton"></div></div>
+				<div id="aftersong" class="aftersong" title="下一曲"><div class="nextbutton"></div></div>
+			</div>
+			<div id="vol" class="vol" title="音量">
+				<div id="volbar" class="volbar">
+				<!--空白填充 -->
+					<div id="cur_vol_cover" class="cur_vol_cover"></div>
+					<!--音量条 -->
+					<div id="cur_vol_bar" class="cur_vol_bar">
+					<!--滑块 -->
+						<div class="volbutton" title="1.0"></div>
+					</div>
+				</div>
+				<!--声音图标 -->
+				<div id="volume" class="volume" title="声音"><div class="volume_bg" title="静音"></div></div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="timetips">
+		<div id="wordtip"></div>
+		<div id="timetip"></div>
+	</div>
+</div>
+
+<!--歌曲列表 -->
+<div id="musiclist" class="musiclist">
+	<!--<div id="listbg" class="listbg"></div>-->
+	<div id="lists" class="lists">
+	
+		<div id="list_top" class="list_top" title="歌曲数量">
+			<div id="listcount" class="listcount">曲目：<span id="count" class="count"></span></div>
+			<div id="closelist" class="closelist">X</div>
+		</div>
+		<div id="m_list" class="m_list" title="歌曲列表">
+			
+			<!--<ul id="music_info" class="music_info">
+					<li id="music_name3" class="music_name playing" title="歌曲5"><div class="playing_img"></div>歌曲5</li>
+					<li id="music_id" >5</li>
+			</ul>-->
+		
+		</div>
+	</div>
+</div>
+<!--风格选择-->
+<div class="musicstyle" id="musicstyle">
+	<div class="stlname" >音乐风格</div><div class="stlclose"  >X</div>
+	<div class="style_green" id="sg" title="小清新">Indie Pop</div>
+	<div class="style_red" id="sr" title="舞曲">Dance</div>
+	<div class="style_blue" id="sb" title="轻音乐">Light</div>
+	<div class="style_white" id="sw" title="治愈系">Healing</div>
+</div>
+<!--提示层-->
+<div id="tipbg"></div>
+<div id="tips">
+<div id="tipcontent"></div>
+<div id="confbtn">确认</div>
+</div>
+<div id="opsm">
+	<div id="optips">说明</div>
+	<div id="opcont">
+	<p>支持的操作:</p>
+	<p>1.切换音乐风格</p>
+	<p>2.播放列表拖拽</p>
+	<p>3.播放模式切换</p>
+	<p>4.键盘空格暂停/播放</p>
+	<p>5.键盘左右键 上/下一曲</p>
+	</div>	
+</div>
+</body>
+</html>

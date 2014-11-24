@@ -1,0 +1,107 @@
+*{margin: 0;padding: 0}
+body{
+	background-color: #cca;
+	
+
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+img{border: none;}
+h1{	
+	margin: 25px;	
+	padding-bottom: 0;
+	text-align: center;
+}
+
+
+#onepiece{
+	width: 1170px;
+	height:630px;
+	overflow: hidden;   
+	margin: 25px auto;
+	box-shadow: 0 0 10px 2px rgba(0,0,0,0.4);/* x轴偏移 y轴偏移 模糊距离 阴影尺寸 颜色  */
+
+}
+
+#onepiece ul{
+       width:3000px;
+}
+
+#onepiece li{
+		display:block;
+		width: 130px;
+		height: 630px;
+		position: relative;
+		float: left;
+		border-left: 1px solid #aaa;
+		box-shadow: 0 0 25px 10px rgba(0,0,0,0.4);
+		-moz-transition:all 0.5s;
+		-webkit-transition:all 0.5s;
+		transition: all 0.5s;
+		
+}
+
+#onepiece li img{
+	display: block;
+	width:850px;
+}
+
+#onepiece ul:hover li{
+	width: 40px;
+}
+
+#onepiece ul li:hover{
+	width:850px;
+}
+
+
+
+#onepiece .title{
+	position: absolute;
+	left:0; 
+	bottom:0;
+	width:850px;
+	background:rgba(0,0,0,0.5);
+}
+
+#onepiece .title a{
+	display: block;
+	color:#fff;
+	font-size: 16px;
+	padding: 5px;
+}
+
+#onepiece .title span{
+	display:block;
+	color:#ccc;
+	font-size: 16px;
+	font-style: italic;
+	padding-left: 5px;
+	padding-bottom:10px;
+}
+
+.codrops-demos{
+	margin:0 auto;
+	text-align:center;
+	
+}
+.current-demo{
+	color:#F00;
+	
+}
+a:hover{
+	color:#666;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

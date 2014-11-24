@@ -1,0 +1,9 @@
+music.xml初始音乐
+sg.xml 小清新 
+sr.xml  舞曲
+sw.xml  治愈系
+sb.xml  轻音乐
+
+尽量使用小码率的音频文件，防止链接直接过长
+
+--落叶伤尘namerror.com

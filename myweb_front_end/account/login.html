@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>登录-LOL</title>
+
+<meta name="keywords" content="喜欢LOL的童鞋可以进来看看">
+<meta name="description" content="发布一些LOL的文章和图片">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="author" content="LOL">
+<link href="../css/bootstrap1.css" rel="stylesheet">
+<link href="../css/custom_register.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+
+
+</head>
+
+<body style="background-image:url(../img/girl.jpg)" onLoad="i=0">  
+  <div class="whitebox">
+    <div class="daohang">
+      <ul class="breadcrumb">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.php">首页</a>&nbsp;&nbsp;<span class="divider">></span></li>
+       <li class="active">&nbsp;&nbsp;登录</li>
+      
+      </ul>
+    
+    </div>
+  
+  
+  <form id="reg-form" name="form1" method="post" action="../phpfile/login-1.php" onsubmit="return FrontPage_Form1_Validator(this)">
+    <div class="loginbox">
+      <span class="h3">登录</span>
+      
+      <span class="space">没有帐号？ <a href="register.html"  class="text-warning" title="立即注册撸友之家">立即注册»</a></span><br>
+      
+      <p><input id="name" name="name"  type="text" placeholder="昵称" class="textbox">
+          
+      <p><input id="passwd" name="passwd" type="password" placeholder="密码" class="textbox">
+         
+      <p><input name="unum" type="text" id="unum" size="10" placeholder="验证码" class="textbox" />
+        <img src="../phpfile/function.php?id=-1" title="单击刷新" style="cursor:pointer"
+             onclick=eval('this.src="../phpfile/function.php?id='+i+++'"') alt="验证码图片" /></p><br />
+             
+      <button type="submit" id="submit" class="btn btn-danger btn_register btn-lg">登录</button>
+      
+      
+      
+     </div>
+     </form>
+       <div class="quick_login">
+         <p class="text-muted">使用合作账号快速登录</p>
+           <a id="sina-login" href="javascript:;"><img src="../img/weibo.jpg">  新浪微博</a>&nbsp;&nbsp;&nbsp;&nbsp;
+           <a id="qq-login" href="javascript:;"><img src="../img/qq.jpg">  QQ</a>
+       </div>
+     
+     
+     
+     
+     
+    </div>
+  
+  
+  
+  
+  </div>
+
+
+
+
+
+
+</body>
+</html>

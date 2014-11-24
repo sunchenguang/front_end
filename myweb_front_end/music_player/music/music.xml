@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <albums>
+   <music id="1">
+		<name>Yesterday</name>
+		<author>蔡淳佳</author>
+		<album>庆幸拥有蔡淳佳</album>
+		<src>http://nimoimages.qiniudn.com/Yesterday.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/04/%E8%92%B2%E5%85%AC%E8%8B%B1-11-150x150.jpg</cover>
+		<lrc>music/lrc/Yesterday.lrc</lrc>
+  </music>
+  <music id="2">
+		<name>call me maybe</name>
+		<author>Carly Rae Jepsen;</author>
+		<album>暂无</album>
+		<src>music/audio/Call Me Maybe.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-tips1-150x150.jpg</cover>
+		<lrc>music/lrc/14877335.lrc</lrc>
+  </music>
+   <music id="3">
+		<name>Jimi And Lucy</name>
+		<author>梁晓雪</author>
+		<album>花样年华</album>
+		<src>http://nimoimages.qiniudn.com/Jimi%20And%20Lucy.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-1320049580463-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+   <music id="4">
+		<name>A Little Love</name>
+		<author>冯曦舒</author>
+		<album>A Little Love</album>
+		<src>http://nimoimages.qiniudn.com/A%20Little%20Love.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/04/%E7%AE%80%E7%BA%A6%E3%81%AE%E7%BE%8E30-150x150.jpg</cover>
+		<lrc>music/lrc/A Little Love.lrc</lrc>
+  </music>
+  <music id="5">
+		<name>一个人</name>
+		<author>夏婉安</author>
+		<album>一个人</album>
+		<src>http://nimoimages.qiniudn.com/%E4%B8%80%E4%B8%AA%E4%BA%BA.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/checkbg-150x150.jpg</cover>
+		<lrc>music/lrc/一个人.lrc</lrc>
+  </music>
+   <music id="6">
+		<name>无乐不作</name>
+		<author>范逸臣</author>
+		<album>无乐不作</album>
+		<src>http://nimoimages.qiniudn.com/%E6%97%A0%E4%B9%90%E4%B8%8D%E4%BD%9C.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-1320049580463-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+     <music id="7">
+		<name>认真卖萌么么哒</name>
+		<author>兔兔纸</author>
+		<album>么么哒</album>
+		<src>http://nimoimages.qiniudn.com/%E8%AE%A4%E7%9C%9F%E5%8D%96%E8%90%8C%E4%B9%88%E4%B9%88%E5%93%92.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-findcode-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+    
+  
+  
+</albums>

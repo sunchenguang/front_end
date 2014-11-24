@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <albums>
+   <music id="1">
+		<name>晚安 城市</name>
+		<author>未知</author>
+		<album>晚安 城市</album>
+		<src>http://nimoimages.qiniudn.com/wacs.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/04/%E8%92%B2%E5%85%AC%E8%8B%B1-11-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+  <music id="2">
+		<name>夕阳渐落天下</name>
+		<author>未知</author>
+		<album>夕阳渐落天下</album>
+		<src>http://nimoimages.qiniudn.com/xyjltx.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-tips1-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+   <music id="3">
+		<name>遇见</name>
+		<author>未知</author>
+		<album>吉他独奏</album>
+		<src>http://nimoimages.qiniudn.com/yj.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-1320049580463-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+  
+  
+</albums>

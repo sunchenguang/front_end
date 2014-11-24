@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <albums>
+  <music id="1">
+		<name>call me maybe</name>
+		<author>Carly Rae Jepsen</author>
+		<album>暂无</album>
+		<src>http://nimoimages.qiniudn.com/CallMeMaybe.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-tips1-150x150.jpg</cover>
+		<lrc>music/lrc/14877335.lrc</lrc>
+  </music>
+   <music id="2">
+		<name>Young For You</name>
+		<author>GALA</author>
+		<album>GALA</album>
+		<src>http://nimoimages.qiniudn.com/GALA-Young%20For%20You.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-1320049580463-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+  <music id="3">
+		<name>What Doesn't Kill You</name>
+		<author>Kelly Clarkson</author>
+		<album>What Doesn't Kill You</album>
+		<src>http://nimoimages.qiniudn.com/Kelly%20Clarkson-What%20Doesn't%20Kill%20You.mp3</src>
+		<cover>http://nimoimages.qiniudn.com/wp-content/uploads/2014/07/cropped-1320049580463-150x150.jpg</cover>
+		<lrc></lrc>
+  </music>
+
+  
+  
+</albums>
+

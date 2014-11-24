@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.whitebox {
+	height:470px; 
+	width:100%; 
+	background-color:#FFF; 
+	display:inline-block;
+	margin-top:100px;
+	opacity:0.7; 
+	
+	
+	
+}
+.regbox{
+	margin-left:680px;
+	padding-top:0px;
+	
+	
+	
+}
+.space{
+	padding-left:120px;	
+}
+.textbox{
+	width:300px;
+	margin-top:10px;
+	margin-bottom:10px;
+	
+	
+}
+.btn_register{
+	margin-left:220px;
+	margin-top:10px;
+	
+	
+}
+.quick_login{
+	margin-left:750px;
+	margin-top:15px;
+	
+	
+}
+.text-empty{
+	color:#F00;
+	margin-left:20px;
+	
+	
+}
+.loginbox{
+	margin-left:680px;
+	padding-top:20px;
+	
+	
+}
+.daohang{
+	padding-top:0px;
+}
+
+

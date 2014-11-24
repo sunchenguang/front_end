@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:url(../img/576114.jpg) no-repeat;
+	background-size:cover;
+}
+
+#wrapper{
+	background:#FFF;
+	width:1000px;
+	height:600px;
+	margin:0 auto;
+	margin-top:30px;
+	opacity:0.4;
+}
+#write_log{
+	width:100px;
+	height:50px;
+	margin-left:30px;
+	margin-top:-10px;
+	background-color:cyan;
+	border-radius:10px;
+	font-size:larger;
+	font-weight:bold;
+	
+	
+	
+	
+}
+
+.daohang{
+	padding-top:0px;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color:cyan;
+  border-radius:50px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+  font-weight:bolder;
+  font-size:20px;
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #cccccc;
+  
+}
+.breadcrumb > .active {
+  color:navy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

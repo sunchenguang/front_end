@@ -1,0 +1,817 @@
+@font-face
+{
+font-family: monaco;
+src: url('monaco.ttf'),
+     url('monaco.eot'); /* IE9+ */
+}
+body{
+	overflow:hidden;
+	color:#ccc;
+	background-image:url(../images/bg.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+/*banner*/
+.banner{
+width:100%;
+height:30px;
+background:rgba(0,0,0,0.3);
+position:fixed;
+top:0;
+color:#fff;
+padding-left:20px;
+line-height:30px;
+}
+/**player定位**/
+.player{
+	position:absolute;
+	width:500px;
+	height:300px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -250px;
+	display:block;
+}
+	/*面板部分*/
+.pbg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#f3f3f3;
+	box-shadow:0 0 40px #E1E1E1 inset;
+	border-radius:8px;
+	z-index:2;
+	border:2px solid #FFF;
+}
+.bg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:url(../images/bg.png);
+	border-radius:8px;
+	z-index:3;
+}
+.panel{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:4;
+}
+	/**TOP部分**/
+.pname{
+	width:100%;
+	height:30px;
+}	
+.mname{
+	width:390px;
+	height:18px;
+	float:left;
+	text-indent:10px;
+	padding:3px 0 0 3px;
+	color:#888;
+}
+.playername{
+	width:100px;
+	height:30px;
+	float:right;
+	color:#f3f3f3;
+	font-weight:bold;
+	text-shadow: -1px -1px white, 1px 1px #ccc;
+	text-indent:10px;
+	font-size:18px;
+	line-height:30px;
+}
+	/**Midd部分**/
+.minfo{
+	width:500px;
+	height:160px;
+}
+	/**M左边**/
+.m_info{
+	width:200px;
+	height:160px;
+	float:left;
+}
+.m_img{
+	width:128px;
+	height:128px;
+	margin:0 auto;
+	border:3px solid #f3f3f3;
+	border-radius:50%;
+	background:url(../images/123.jpg);
+	background-size:cover !important;
+	background-position:center !important;;
+	box-shadow: 0 0 1px #999;
+	/* Firefox: */
+	animation: rotation 8s linear  infinite ;
+	/* Safari 和 Chrome: */
+	-moz-animation: rotation 8s linear  infinite ;
+	-webkit-animation: rotation 8s linear  infinite ;
+}
+.imgcover{
+	position:absolute;
+	z-index:555;
+	width:20px;
+	height:20px;
+	margin:0 auto;
+	border:9px solid #fff;
+	border-radius:50%;
+	margin:45px;
+	background:#f3f3f3;
+	box-shadow: inset 0 0  1px #000, 0px 0px 2px #000;
+}
+.m_name{
+	width:200px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+}
+/**M右边***************歌词部分*/
+.m_lrc{
+	width:300px;
+	height:160px;
+	float:right;
+}
+.lrc{
+	width:285px;
+	height:126px;
+	margin-left:2px;
+	margin-right:10px;
+	border:3px solid #e5e5e5;
+	border-radius:8px;
+	background:#e7e7e7;
+	box-shadow:0 3px 4px #999 inset;
+}
+.lrcshow{
+	width:280px;
+	height:120px;
+	/* overflow-y :auto;
+	overflow-x:hidden; */
+	overflow:hidden;
+	margin: 2px 4px 2px 2px;
+	position:relative;
+}
+.lrcshow>ul{
+	text-align:center;
+	color:#888;
+	position: absolute;
+	width:280px;
+	height:120px;
+}
+.lrcshow>ul>li{
+	display:block;
+	line-height: 24px;
+	min-height: 24px;
+	font-size:12px;
+	text-shadow: 0 0 2px #fff;
+}
+
+#nolrc{
+	line-height: 120px;
+	min-height: 24px;
+}
+/***歌词高亮**/
+.currlrc{
+	color:#00b1e1;
+	font-size:16px!important;
+}
+.m_id3{
+	width:300px;
+	height:30px;
+}
+.m_singer{
+	width:100px;
+	height:30px;
+	float:left;
+	line-height:30px;
+}
+.m_album{
+	width:200px;
+	height:30px;
+	float:right;
+	line-height:30px;
+}
+.m_name .info_m{
+	margin-left:15px;
+}
+.info_m{
+	width:35px;
+	height:30px;
+	display:block;
+	float:left;
+}
+.album,.musicname{
+	width:150px;
+}
+.singer{
+	width:50px;
+}
+.singer,.album,.musicname{
+	color:#4F4F4F;
+	white-space: nowrap;  
+    text-overflow: ellipsis;  
+	height:30px;
+	display:block;
+	float:left;
+	overflow: hidden;  
+	text-align:left;
+}
+	/**BOTTOM部分**/
+.mctrl{
+	width:500px;
+	height:110px;
+}
+/*进度条*/
+.pg_bar{
+	width:100%;
+	height:20px;
+}
+.temp{
+	width:30px;
+	height:20px;
+	float:left;
+}
+.pg_bar_bg{
+	width:410px;
+	height:8px;
+	float:left;
+	border:2px solid #e5e5e5;
+	border-radius:8px;
+	background:#e7e7e7;
+	box-shadow:0 3px 4px #999 inset;
+	margin:5px 0 0 5px;
+}
+.curr_bar{
+	width:0;
+	height:8px;
+	background:#fff;
+	border-radius:8px;
+	box-shadow:0 -3px 4px #ccc inset;
+}
+.rest_time{
+	text-indent:10px;
+	width:50px;
+	height:20px;
+	float:right;
+	color:#999;
+	font-size:12px;
+	line-height:20px;
+}
+	/**控制区域*/
+.playtype{
+	height:90px;
+	width:90px;
+	float:left;
+	padding:0 0 0 10px;
+	margin-left:30px;
+}
+.type{
+	height:32px;
+	width:32px;
+	margin:5px;
+	float:left;
+	cursor:pointer;
+}
+.showbtn{
+	height:32px;
+	width:32px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+	background-position:-251px -175px;
+}
+.modebtn{
+	height:32px;
+	width:32px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+	background-position:-273px -15px;
+}
+	/*******播放模式选择区域****/
+.modearea{
+	left:90px;
+	top:164px;
+	height:128px;
+	width:32px;
+	position:absolute;
+	/***#EEE(238,238,238)**/
+	background:#f1f1f1;
+	border-radius:15px!important;
+	border: 1px solid #d4d4d4;
+	z-index:10;
+	display:none;
+	box-shadow: 1px 1px 3px #ccc;
+}
+.seqtype,.looptype,.single,.randtype{
+	height:32px;
+	width:32px;
+	float:left;
+	border-radius:15px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+	opacity:0.8;
+}
+.seqtype:hover,.looptype:hover,.single:hover,.randtype:hover{
+	opacity:1;
+	/* border-left: 1px  solid #00BFFF ; */
+	box-shadow: 0 2px 3px #fff inset,0 2px 3px #aaa ;
+}
+.seqtype{
+	background-position:-271px -67px;
+}
+.looptype{
+	background-position:-273px -15px;
+}
+.single{
+	background-position:-273px -42px;
+}
+.randtype{
+	background-position:-273px 8px;
+}
+
+#lrcswitch{
+color:#2c2c2c;
+font-weight:bold;
+line-height:32px;
+}
+#stylechange{
+color:#000;
+line-height:32px;
+font-size:10px;
+}
+	/***按钮效果***/
+.type,.play,.beforesong,.aftersong{
+  border-radius:50%;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  background-color: #eeeeee;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, #fbfbfb, #e1e1e1);
+  background: -moz-linear-gradient(top, #fbfbfb, #e1e1e1);
+  background: -o-linear-gradient(top, #fbfbfb, #e1e1e1);
+  background: linear-gradient(top, #fbfbfb, #e1e1e1);
+  border: 1px solid #d4d4d4;
+  text-align:center;
+  }
+.type:active,.play:active,.beforesong:active,.aftersong:active{
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+  background: #eeeeee;
+  color: #bbbbbb;
+}
+/**控制按钮*/
+.ctrlbutton{
+	height:90px;
+	width:220px;
+	float:left;
+	margin-left:50px;
+}
+	/*上一曲*/
+.beforesong{
+	margin:20px 4px 0 0;
+	float:left;
+    width: 46px;
+    height: 46px;
+	font-size:30px;
+	 line-height:46px;
+}
+.prebutton,.nextbutton{
+	 width: 46px;
+    height: 46px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+}
+.prebutton{
+	   background-position:-55px 0 ;
+}
+.nextbutton{
+	   background-position:2px 0 ;
+}
+	/* 播放**/
+.play{
+	height:70px;
+	width:70px;
+	float:left;
+	margin-top:5px;
+	font-size:50px;
+	 line-height:60px;
+}
+#playbutton{
+	height:70px;
+	width:70px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+	background-position:15px -45px ;
+}
+#pausebutton{
+	height:70px;
+	width:70px;
+	background:url(../images/button.png);
+	background-repeat:no-repeat;
+	background-position:-65px -45px ;
+}
+.aftersong{
+	margin:20px 0 0 4px;
+	float:left;
+	width: 46px;
+    height: 46px;
+	font-size:30px;
+	 line-height:46px;
+}
+	/******音量控制区域*****/
+.vol{
+	height:90px;
+	width:50px;
+	float:left;
+}
+/***音量条**/
+.volbar{
+	height:70px;
+	margin:0 18px 0 18px;
+	width:10px;
+	background:green;
+	border:2px solid #e5e5e5;
+	border-radius:8px;
+	background:#00b1e1;
+	box-shadow:0 0 4px #999 inset;
+}
+/******白色覆盖******/
+.cur_vol_bar{
+	width:8px;
+	height:10px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:8px;
+	box-shadow:0 0 1px #999 inset;
+}
+/**滑块**/
+.volbutton{
+	width:5px;
+	height:5px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:50%;
+	margin:0 auto;
+	box-shadow:0 0 2px #999 inset;
+	position:absolute;
+	top:214px;
+	left:422px;
+	z-index:12;
+}
+.volbutton:hover{
+background:#33FF66;
+border:1px solid #33FF66;
+cursor:pointer;
+box-shadow:0 0 1px #32cd32 inset,0 0 4px #00ff7f;
+}
+
+/*空白覆盖条**/
+.cur_vol_cover{
+    width:8px;
+	margin:0 1px 0 1px;
+	height:60px;
+}
+	
+.volume{
+	height:20px;
+	width:50px;
+	color:#666;
+	text-align:center;
+}
+/**小喇叭**/
+.volume_bg{
+height:20px;
+width:10px;
+margin:0 auto;
+background:url(../images/button.png);
+background-repeat:no-repeat;
+background-position:0 -185px;
+}
+	
+/***旋转动画**/	
+@keyframes rotation
+{
+0%   {transform:rotate(0);}
+100% {transform:rotate(360deg);}
+}
+@-moz-keyframes rotation /* Firefox */
+{
+0%   {-moz-transform:rotate(0);}
+100% {-moz-transform:rotate(360deg);}
+}
+@-webkit-keyframes rotation /* Safari 和 Chrome */
+{
+0%   {-webkit-transform:rotate(0);}
+100% {-webkit-transform:rotate(360deg);}
+}
+/*歌曲列表*/
+.musiclist{
+	width:200px;
+	height:300px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 255px;
+	z-index:10;
+}
+
+.listbg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,0.5);
+	z-index:2;
+}
+/*显示部分*/
+.lists{
+	position:absolute;
+	width:200px;
+	height:300px;
+	z-index:3;
+	border:2px solid #FFF;
+	border-radius:8px;
+
+}
+.list_top{
+	width:100%;
+	height:20px;
+	border-radius:5px 5px 0 0;
+	background:#f3f3f3;
+}
+.listcount{
+	width:170px;
+	height:20px;
+	float:left;
+	padding-left:5px;
+	cursor:move;
+}
+.closelist{
+	width:20px;
+	height:20px;
+	float:right;
+	text-align:center;
+	color:#999;
+	cursor:pointer;
+}
+.closelist:hover{
+	color:#000;
+}
+/*歌曲列表部分*/
+.m_list{
+	width:100%;
+	height:280px;
+	overflow-y :auto;
+	overflow-x:hidden;
+	border-radius:0 0 8px 8px;
+	box-shadow:0 3px 4px #999 inset;
+	background:rgba(255,255,255,0.5);
+}
+.m_list>ul{
+	color:#666;
+
+}
+.m_list>ul>li:first-child{
+	text-indent:20px;
+	width:100%;
+	display:block!important;
+	border-bottom:1px solid #f7f7f7;
+	height:20px;
+}
+.m_list>ul>li:hover{
+	box-shadow:0 -2px 5px #FFF inset;
+	cursor:pointer;
+}
+.m_list>ul>li{
+   display:none;
+}
+.playing{
+	background:#00BFFF ;
+	color:#fff;
+}
+.playing_img{
+	width:12px;
+	height:12px;
+	display:block;
+	position:absolute;
+	background:url(../images/playing.gif);
+	margin:2px 0 0 5px;
+}
+.pause_img{
+	background:url(../images/button.png)!important;
+	background-repeat:no-repeat;
+	background-position:-288px -188px!important;
+}
+
+/********歌曲进度点选提示*****/
+#timetips{
+position:absolute;
+top:165px;
+left:0;
+width:60px;
+height:20px;
+background-color:#fff;
+border-radius:5px;
+border:1px solid #c1c1c1;
+z-index:20;
+opacity:0.9;
+display:none;
+}
+#wordtip{
+position:absolute;
+width:100%;
+height:100%;
+z-index:22;
+color:#000
+}
+#timetip{
+position:absolute;
+width:10px;
+height:10px;
+left:15px;
+bottom:0;
+background:#fff;
+border-color:#c1c1c1;
+border-width: 0 1px 1px 0;
+border-style:solid;
+transform: rotate(45deg);
+-ms-transform: rotate(45deg);		/* IE 9 */
+-webkit-transform: rotate(45deg);	/* Safari and Chrome */
+-o-transform: rotate(45deg);		/* Opera */
+-moz-transform: rotate(45deg);
+margin-bottom:-6px;
+}
+/*音乐风格*/
+.musicstyle{
+	position:absolute;
+	width:500px;
+	height:300px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -250px;
+	border:1px solid #fff;
+	background:rgba(255,255,255,0.4);
+	border-radius:8px;
+	 display:none; 
+}
+.stlname{
+position:absolute;
+	width:500px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	color:#fff;
+	font-size:20px;
+}
+.stlclose{
+	position:absolute;
+	width:50px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+	font-size:20px;
+	left:450px;
+	cursor:pointer;
+}
+div[class^="style"]{
+	width:180px;
+	height:90px;
+	border-radius:8px;
+	position:absolute;
+	text-align:center;
+	line-height:90px;
+	color:#fff;
+	font-family: monaco;
+	font-size:16px;
+	transition:transform: 1s;
+	-ms-transition:-ms-transform: 1s;		/* IE 9 */
+	-moz-transition:-moz-transform 1s; /* Firefox 4 */
+	-webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+	-o-transition:-o-transform 1s; /* Opera */
+	cursor:pointer;
+}
+div[class^="style"]:hover{
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);		/* IE 9 */
+	-webkit-transform: rotate(360deg);	/* Safari and Chrome */
+	-o-transform: rotate(360deg);		/* Opera */
+	-moz-transform: rotate(360deg);
+	box-shadow:0 0 5px #fff;
+}
+.style_red{
+	top:170px;
+	left:50px;
+	background:#FF9224;
+}
+.style_green{
+	top:70px;
+	left:50px;
+	background:#00CD66;
+
+}
+.style_blue{
+	top:70px;
+	left:280px;
+	background:#0099ff;
+
+}
+.style_white{
+	top:170px;
+	left:280px;
+	background:#E1E1E1;
+}
+
+/*左部淡入*/
+@-webkit-keyframes fadeInLeftBig{
+0%{opacity:0;
+-webkit-transform:translateX(-2000px)}
+100%{opacity:1;
+-webkit-transform:translateX(0)}
+}
+
+@-moz-keyframes fadeInLeftBig{
+0%{opacity:0;
+-moz-transform:translateX(-2000px)}
+100%{opacity:1;
+-moz-transform:translateX(0)}
+}
+
+@keyframes fadeInLeftBig{
+0%  {opacity:0; transform:translateX(-2000px)}
+100%{opacity:1; transform:translateX(0)}
+}
+
+
+/**提示层**/
+#tipbg{
+	height:100%;
+	width:100%;
+	opacity:0.3;
+	background:#000;
+	position:absolute;
+	z-index:50;
+	display:none;
+}
+#tips{
+	width:300px;
+	height:160px;
+	background:#fff;
+	position:absolute;
+	z-index:60;
+	top:50%;
+	left:50%;
+	margin:-150px 0 0 -70px;
+	border-radius:8px;
+	border:3px solid #09f;
+	text-align:center;
+	display:none;
+}
+#tipcontent{
+	width:300px;
+	height:60px;
+	position:absolute;
+	top:50px;
+	left:0;
+	color:#444;
+}
+#confbtn{
+	width:80px;
+	height:30px;
+	background:#09f;
+	position:absolute;
+	top:110px;
+	left:110px;
+	color:#fff;
+	line-height:30px;
+	cursor:pointer;
+}
+#opsm{
+	width:190px;
+	height:150px;
+	position:fixed;
+	top:50%;
+	margin:-95px 0 0 0;
+	right:-160px;
+}
+#optips{
+	width:30px;
+	height:60px;
+	background:#09f;
+	border-radius:5px 0 0 5px;
+	color:#fff;
+	font-size:18px;
+	text-align:center;
+	cursor:pointer;
+	float:left;
+}
+#opcont{
+	width:160px;
+	height:150px;
+	background:#fff;
+	color:#888;
+	font-size:14px;
+	text-align:center;
+	float:left;
+}

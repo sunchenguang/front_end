@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+margin:20px;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+#musicList{
+	
+}
+li{
+  
+   line-height:20px;
+   padding-bottom:3px;
+   vertical-align: middle; 
+}
+
+.float_r{float:right;}
+.float_l{float:left;}
+.playMode{text-align:right;}
+
+.songStyle{
+	width: 300px;
+	margin-bottom:20px;
+	border:1px solid #92b0dd;
+	background-color: #EFF7FF
+}
+.songStyle h3{
+margin: 1px;
+padding: 1px 1px 1px 10px;
+background-color: #B2D3F5;
+height: 24px;
+}
+.playDiv{
+	width: 610px;  
+    margin-bottom:10px;  
+    border:1px solid #92B0DD;  
+    background-color: #FFFFFf  
+}
+.currentMusic{  
+    background-color: #E2EAF8;  
+    height: 24px;  
+	width:100%;
+}
+.currentSpan{
+	padding-left:3px;
+}  
+.lastMusic{
+ background-color: #E2EAF8;  
+ text-align:center;
+}
+.lastMusic img{
+	width:32px;
+	height:32px;
+	cursor:pointer;
+	
+}
+.infoStyle{
+	margin-left:10px;
+	width: 300px;
+	margin-bottom:20px;
+	border:1px solid #96C2F1;
+	background-color: #EFF7FF;
+}
+.infoStyle h3{
+margin: 1px;
+padding: 1px 1px 1px 10px;
+background-color: #B2D3F5;
+height: 24px;
+}
+.info{
+	width:49%;
+}
+.picInfo{
+	width:152px;
+	
+	height:175px;
+}
+strong span{
+	margin-left:4px;
+}
+.info div{
+	padding: 10px 0px 10px 10px;
+	font-size:12px;
+}
+.liOn{
+	background-color:#E3E197;
+}
+.Gray
+{
+ filter:alpha(style=0,opacity=30,finishopacity=30);
+}
+
+
+.first,.last,.pause,.next,.end,.play,.stop{
+	background:url(../img/glyphicons-halflings.png) no-repeat; overflow:hidden;
+	
+}
+
+
+.first{
+	background-position:-208px -63px;
+}
+.last{
+	background-position:-233px -63px;
+}
+
+.pause{
+	background-position:-278px -63px;
+}
+.next{
+	background-position:-326px -63px;
+}
+
+.end{
+	background-position:-351px -63px;
+}
+.play{
+	background-position:-255px -63px;
+}
+.stop{
+	background-position:-278px -63px;
+}
+
+
+.new,.hot{
+	background:url(../img/a.png) no-repeat; overflow:hidden;
+	display:inline-block;
+	
+}
+
+
+.new{
+	
+	background-position:-84px -35px;
+	width:25px;
+	height:25px;
+}
+.hot{
+	background-position:-110px -35px;
+	width:25px;
+	height:25px;
+	
+	
+}
+
+.lrc{
+	width:280px;
+	height:400px;
+	background-color:lightgrey; 
+	float:right;
+	margin-top:0;
+	margin-right:400px;
+	
+	
+}
